@@ -2,7 +2,8 @@
 // {} this is atribute to a tag 
 
 /*
-*  <div id="parent">
+* 
+   <div id="parent">'
           <div id="child">
           <h1> hey I am H1 Tag </h1>
           </div>
@@ -14,7 +15,9 @@
 
 const parentdiv =
      React.createElement("div", { id: "parent" }, 
-     React.createElement("div", { id: "child" },[ React.createElement("h1", { id: "head" }, "Hey I am H1 Tag"), React.createElement("h2", { id: "head2" }, "Hey I am H2 Tag")]
+     React.createElement("div", { id: "child" },
+        [ React.createElement("h1", { id: "head" }, "Hey I am H1 Tag"), 
+        React.createElement("h2", { id: "head2" }, "Hey I am H2 Tag")]
     ))
 
 
