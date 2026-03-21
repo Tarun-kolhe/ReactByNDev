@@ -1,0 +1,14 @@
+.card-container{
+    justify-content: center;
+    border: 1px slid gray;
+    background-color: rgb(206, 235, 225);
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+
+}
+
+.card-container li {
+    list-style: none;
+    padding: 5px;
+}

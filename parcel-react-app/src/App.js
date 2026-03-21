@@ -1,11 +1,16 @@
 import React from "react";
+import Heading from "./components/Heading";
+import "./App.css"
+import MiddleCont from "./components/MiddleCont"
+import Usercards from "./components/Usercards"
 
 function App() {
   return (
-    <div>
-      <h1>Hello React + Parcel 🚀</h1>
-      <p>My first Parcel React App</p>
+    <div className="app">
+      <Heading/>
+      <MiddleCont/>
     </div>
+    
   );
 }
 

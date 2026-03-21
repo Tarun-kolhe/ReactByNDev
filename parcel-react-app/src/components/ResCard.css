@@ -1,0 +1,48 @@
+.res-card-cont{
+    background-color: orange;
+    width: 300px;
+    height: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.res-card-cont:hover{
+    border: 1px solid rgb(241, 197, 181);
+}
+.res-image{
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.subrev-cont{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.last-cont-rescard{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.resName{
+    margin: 0px;
+}
+.cuisins{
+    font-size: 12px;
+}
+.rating-nd-review,.del-time,.cost-for{
+    padding: 5px;
+    background-color: gold;
+    border-radius: 8px;
+}
+.bottom-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+
+}

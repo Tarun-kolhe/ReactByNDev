@@ -1,0 +1,9 @@
+
+
+.searchbar-cont{
+    display: flex;
+    gap: 10px;
+}
+.inputbox,.btn-search{
+  padding: 10px;
+}

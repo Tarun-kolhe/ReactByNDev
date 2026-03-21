@@ -2,10 +2,12 @@
   "name": "parcel-react-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html --no-cache",
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
