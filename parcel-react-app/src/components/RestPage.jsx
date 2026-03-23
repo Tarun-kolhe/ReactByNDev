@@ -8,19 +8,13 @@ import AccordionrestPage from "./AccordionrestPage";
 const RestPage = () =>{
     const {restid}=useParams()
     const [apiResponse,setApiResponse]=useState([])
-    const API_END=REST_MAIN_PAGE_API+restid
-    const [isopen,setIsOpen]=useState(false)
-
-    
+    const API_END=REST_MAIN_PAGE_API+restid 
  
    console.log(API_END)
     useEffect(()=>{
     fetchRestpage()
     },[])
 
-    const handleToggle=()=>{
-     setIsOpen(!isopen)
-    }
     const fetchRestpage= async()=>{
        const response= await fetch(API_END)
        const data= await response.json();
