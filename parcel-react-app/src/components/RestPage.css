@@ -1,0 +1,172 @@
+/* ===== PAGE BACKGROUND ===== */
+.restaurant-page {
+  background: #f5f0eb;
+  min-height: 70vh;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 2rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  margin-top: 2px;  
+  background: rgb(56, 32, 1);
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.restName {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.area-name {
+  font-size: 14px;
+  color: #c9a96e;
+  margin-bottom: 14px;
+}
+
+.avg-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #2d6a2d;
+  color: #a8f0a8;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.cousines {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin-top: 8px;
+}
+
+.distance {
+  display: inline-flex;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #3a2a1a;
+  color: #f5c88a;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.expecteddel {
+  display: inline-flex;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #1a3a5c;
+  color: #a8d4f5;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ===== INFO STRIP ===== */
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.info-item {
+  padding: 12px 10px;
+  text-align: center;
+  border-right: 1px solid #f0ece8;
+}
+
+.info-item:last-child { border-right: none; }
+
+.info-val {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.info-lbl {
+  font-size: 11px;
+  color: #888888;
+  margin-top: 2px;
+}
+
+/* ===== MENU SECTION ===== */
+.groupOne {
+  padding: 1.2rem 1rem;
+}
+
+
+
+/* ===== MENU CARD ===== */
+.section-title {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid #ede8e0;
+  margin-bottom: 10px;
+  background-color: orange;
+  font-weight: bold;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.item-desc {
+  font-size: 12px;
+  color: #888888;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.item-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #c9a96e;
+}
+
+.add-btn {
+  background: #ffffff;
+  border: 1.5px solid #c9a96e;
+  color: #c9a96e;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.add-btn:hover {
+  background: #c9a96e;
+  color: #ffffff;
+}
+
+.menu-card{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.menuName{
+    font-weight: bold;
+}
+.menu{
+    background-color: #d0d1bf;
+    border-radius: 8px;
+    padding: 10px;
+    width: 450px;
+}

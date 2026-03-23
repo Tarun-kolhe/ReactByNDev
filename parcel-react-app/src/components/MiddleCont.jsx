@@ -3,6 +3,8 @@ import "./MiddleCont.css"
 import restaurantData from "../utils/mockdata"
 import { useState, useEffect } from "react"
 import SearchBar from "../components/SearchBar"
+import {REST_CARDS_API} from "../utils/constants"
+
 
 
 
@@ -11,6 +13,8 @@ const MiddleCont = () => {
   const [filteredrest, setFilteredrest] = useState([]);
   const [searchText,setSearchText]=useState("");
   const [loading, setloading] = useState(false);
+
+
 
   useEffect(() => {
     fetchData()
@@ -22,7 +26,7 @@ const MiddleCont = () => {
   }, [])
 
   const fetchData = async () => {
-    const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
+    const data = await fetch(REST_CARDS_API);
     const json = await data.json();
 
     const cards =
@@ -31,6 +35,7 @@ const MiddleCont = () => {
     setrestaurantList(cards || []);
     setFilteredrest(cards || [])
   };
+  
 
 
   return (

@@ -1,0 +1,19 @@
+
+
+
+.error-cont {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: 80vh;            /* full screen height */
+  flex-direction: column;
+}
+
+.child {
+ text-align: center;
+ color: orange;
+}
+.child .h1{
+ text-align: center;
+ font-weight: bolder;
+}
