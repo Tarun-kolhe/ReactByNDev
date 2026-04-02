@@ -1,0 +1,27 @@
+
+.parent_cont_warn{
+    background-color: orangered;
+    display: flex;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 1px;
+}
+
+.message_not_warn{
+    color: white;
+    font-weight: bold;
+}
+
+.parent_cont_succ{
+    background-color: rgb(23, 223, 23);
+    display: flex;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 1px;
+}
+
+.message_not_succ{
+    color: rgb(12, 12, 12);
+}

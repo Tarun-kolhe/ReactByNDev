@@ -1,9 +1,11 @@
-import React from "react" 
+import React, { useContext } from "react" 
 import "./Heading.css"
 import {MY_LOGO} from "../utils/constants"
 import { useState } from "react"
 
 import { useNavigate } from "react-router-dom"
+import UserContext from "../utils/Custom Hooks/UserContext"
+import {useSelector} from "react-redux"
 
 {
   // this is also complete valid js functional comepoenent 
@@ -19,6 +21,9 @@ import { useNavigate } from "react-router-dom"
 const Heading= function(){
   const [btnText,setBtntext]=useState("Login")
   const Navigate=useNavigate();
+
+  const {UserName} =useContext(UserContext)
+  const cartItems =useSelector((store) => store.cart.items) 
   
   return(
     <div className="heading-main">
@@ -38,12 +43,21 @@ const Heading= function(){
           <li className="menu-item" onClick={(()=>{
             Navigate("/about-us")
           })}>About us</li>
+          <li className="menu-item">Groceries</li>
           <li className="menu-item">Orders</li>
-          <li className="menu-item">My Cart</li>
-          <li className="menu-item">Contact us</li>
+          <li className="menu-item" onClick={()=>{
+            Navigate("/my-cart")
+          }}>My Cart ({cartItems.length} Items)</li>
+          <li className="menu-item"
+          onClick={(()=>{
+            Navigate("/contact-us")
+          })}
+          >Contact us</li>
           <li><button onClick={()=>{
             btnText==="Login" ? setBtntext("logout") : setBtntext("Login")
           }} className="btn-login">{btnText}</button></li> 
+
+          <div>{UserName}</div>
         </ul>
       
       </div>

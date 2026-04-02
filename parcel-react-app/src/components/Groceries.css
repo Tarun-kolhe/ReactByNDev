@@ -1,0 +1,24 @@
+
+
+.main-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 300px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+.profile{
+    width: 70px;
+    height: 70px;
+}

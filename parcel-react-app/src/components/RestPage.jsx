@@ -1,31 +1,24 @@
 
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {REST_MAIN_PAGE_API} from ".././utils/constants"
 import "./RestPage.css"
 import AccordionrestPage from "./AccordionrestPage";
+import useRestaurantsMenu from "../utils/Custom Hooks/useRestaurantsMenu"
+import { useState } from "react";
 
 const RestPage = () =>{
+  const [showIndex,setShowIndex]=useState(0)
     const {restid}=useParams()
-    const [apiResponse,setApiResponse]=useState([])
-    const API_END=REST_MAIN_PAGE_API+restid 
- 
-   console.log(API_END)
-    useEffect(()=>{
-    fetchRestpage()
-    },[])
 
-    const fetchRestpage= async()=>{
-       const response= await fetch(API_END)
-       const data= await response.json();
-       console.log(data)
-       setApiResponse(data)
-    }
+    const apiResponse=useRestaurantsMenu(restid)
+
+    const cardsDataRest =
+   apiResponse?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+
+    const filteredData = cardsDataRest.filter(
+    (item) => item?.card?.card
+    );
+
     const { name, areaName,cuisines,id,sla,avgRating } = apiResponse?.data?.cards?.[2]?.card?.card?.info || {};
-    const { title:title1,itemCards } = apiResponse?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card || {}
-    const { title:title2,itemCards:itemCards2 } = apiResponse?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card || {}
-    const { title:title3,itemCards:itemCards3 } = apiResponse?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[3]?.card?.card || {}
-
 
     return(
   <div className="restaurant-page">
@@ -37,10 +30,22 @@ const RestPage = () =>{
     <div className="expecteddel">🕐 {sla?.slaString}</div>
     <div className="cousines">{cuisines?.join(" • ")}</div>
   </div>
-
-  <AccordionrestPage menuTitle={title1} menuItems={itemCards}/>
-  <AccordionrestPage menuTitle={title2} menuItems={itemCards2}/>
-  <AccordionrestPage menuTitle={title3} menuItems={itemCards3}/>
+ 
+ {
+ 
+  filteredData.map((category,index)=>{
+    return(
+    <AccordionrestPage  key={category?.card?.card?.title} 
+    menuTitle={category?.card?.card?.title} 
+    menuItems={category?.card?.card?.itemCards} num={index}
+    showinfo={index===showIndex ? true :false }
+    setshowIndexFunction= {(()=>{
+      index===showIndex ? setShowIndex(null) : setShowIndex(index)}
+    )}
+    />
+    )
+  })
+ }
  
 </div>
     )

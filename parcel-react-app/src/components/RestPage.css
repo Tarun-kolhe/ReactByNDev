@@ -160,6 +160,7 @@
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
+    flex-direction: column;
 }
 .menuName{
     font-weight: bold;
@@ -167,6 +168,17 @@
 .menu{
     background-color: #d0d1bf;
     border-radius: 8px;
-    padding: 10px;
-    width: 450px;
+    padding: 8px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add-cart{
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: lightsalmon;
+  border: none;
 }
